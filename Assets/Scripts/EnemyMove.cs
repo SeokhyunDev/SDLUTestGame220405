@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyMove : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class EnemyMove : MonoBehaviour
             if(heart <= 0)
             {
                 Destroy(gameObject);
+                SceneManager.LoadScene("GameClear");
             }
         }
     }
